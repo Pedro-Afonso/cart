@@ -4,9 +4,8 @@ import Link from 'next/link'
 
 import { setAuthState, setAuthUser } from '@/shared/slices/authSlice'
 import { useAppDispatch, useAppSelector } from '@/shared/hooks'
-import { Button } from '@/shared/components/Button'
 
-export default function Home() {
+export default function Pagina2() {
   const authState = useAppSelector(state => state.auth.authState)
 
   const dispatch = useAppDispatch()
@@ -19,11 +18,6 @@ export default function Home() {
     dispatch(setAuthUser(userName))
   }
 
-  const logout = () => {
-    dispatch(setAuthState(false))
-    dispatch(setAuthUser(''))
-  }
-
   return (
     <>
       <Head>
@@ -33,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Link href="/pagina2">Para página 2</Link>
+        <Link href="/">Para página 1</Link>
         <h1>{authState ? 'Autenticado' : 'Não autenticado'}</h1>
         <form onSubmit={handleLogin}>
           <input
@@ -45,8 +39,6 @@ export default function Home() {
           />
           <button>Login</button>
         </form>
-        <button onClick={logout}>Teste</button>
-        <Button />
       </div>
     </>
   )
