@@ -1,24 +1,28 @@
-import { createWrapper } from 'next-redux-wrapper'
-import { configureStore } from '@reduxjs/toolkit'
+import {
+  combineReducers,
+  configureStore,
+  PreloadedState
+} from '@reduxjs/toolkit'
 
-import { productApi } from '@/shared/services'
+import { sidebarReducer } from '@/slices/sidebarSlice'
+import { cartReducer } from '@/slices/cartSlice'
+import { productApi } from '@/services'
 
-import { cartReducer } from '@/shared/slices/cartSlice'
-import { authReducer } from '@/shared/slices/authSlice'
+const rootReducer = combineReducers({
+  cart: cartReducer,
+  sidebar: sidebarReducer,
+  [productApi.reducerPath]: productApi.reducer
+})
 
-export const makeStore = () =>
+// eslint-disable-next-line no-use-before-define
+export const setupStore = (preloadedState?: PreloadedState<RootState>) =>
   configureStore({
-    reducer: {
-      [productApi.reducerPath]: productApi.reducer,
-      cart: cartReducer,
-      auth: authReducer
-    },
+    reducer: rootReducer,
+    preloadedState,
     middleware: gDM => gDM().concat(productApi.middleware),
     devTools: true
   })
 
-export type AppStore = ReturnType<typeof makeStore>
-export type RootState = ReturnType<AppStore['getState']>
+export type AppStore = ReturnType<typeof setupStore>
+export type RootState = ReturnType<typeof rootReducer>
 export type AppDispatch = AppStore['dispatch']
-
-export const wrapper = createWrapper(makeStore)

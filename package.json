@@ -1,5 +1,5 @@
 {
-  "name": "boilertplate-nextjs-rtk-jest-eslint-prettier-styled",
+  "name": "shopping-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,19 +9,23 @@
     "lint": "next lint",
     "prettier-format": "prettier --write .",
     "prettier-check": "prettier --check .",
-    "test": "jest --maxWorkers=50% --passWithNoTests"
+    "test": "jest --maxWorkers=50% --passWithNoTests",
+    "test-watch": "jest --maxWorkers=50% --passWithNoTests --watch"
   },
   "dependencies": {
     "@next/font": "13.1.6",
     "@reduxjs/toolkit": "^1.9.2",
     "next": "13.1.6",
-    "next-redux-wrapper": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.4.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
@@ -45,8 +49,11 @@
     "jest-environment-jsdom": "^29.4.1",
     "jest-next-dynamic": "^1.0.1",
     "jest-styled-components": "^7.1.1",
+    "next-router-mock": "^0.9.1",
+    "msw": "^1.0.0",
     "prettier": "^2.8.3",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "whatwg-fetch": "^3.6.2"
   },
   "resolutions": {
     "styled-components": "^5"
