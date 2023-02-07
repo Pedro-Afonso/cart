@@ -1,3 +1,4 @@
+import { Environment } from '@/config/environment'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export interface IProduct {
@@ -18,11 +19,11 @@ export interface IGetAllProductsRes {
 
 export const productApi = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://mks-challenge-api-frontend.herokuapp.com/api/v1/'
+    baseUrl: Environment.URL_BASE
   }),
   endpoints: builder => ({
     getAllProducts: builder.query<IGetAllProductsRes, void>({
-      query: () => `products?page=1&rows=8&sortBy=id&orderBy=DESC`
+      query: () => `products?page=1&rows=10`
     })
   })
 })
