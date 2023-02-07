@@ -9,6 +9,9 @@ const nextConfig = {
       {
         hostname: 'mks-sistemas.nyc3.digitaloceanspaces.com',
       },
+      {
+        hostname: 'images.kabum.com.br',
+      }
     ],
   },
 }
