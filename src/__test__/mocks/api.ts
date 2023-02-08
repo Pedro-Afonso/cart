@@ -1,2 +1,1 @@
-export const api =
-  'https://mks-challenge-api-frontend.herokuapp.com/api/v1/products'
+export const api = 'api/products'
