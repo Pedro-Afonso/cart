@@ -1,5 +1,28 @@
 export const productData = [
   {
+    id: 12,
+    name: 'Cadeira De Escritório Fortt Lisboa',
+    brand: 'Comprebel',
+    description:
+      'Com recursos como: ajuste de altura, assento e/ou encosto largo e confortável, a cadeira fortt proporciona excelente conforto para qualquer biotipo corporal.',
+    photo:
+      'https://images.kabum.com.br/produtos/fotos/sync_mirakl/420974/Cadeira-De-Escrit-rio-Fortt-Lisboa-Secret-ria-At-120Kg-Base-Cromada-Com-Rodinha-Cinza-Csf02-C_1674824313_gg.jpg',
+    price: '230.00',
+    createdAt: '2023-01-23T18:17:04.771Z',
+    updatedAt: '2023-01-23T18:17:04.771Z'
+  },
+  {
+    id: 11,
+    name: 'Monitor HQ 24HQ-LED+',
+    brand: '3green',
+    description: 'Um monitor perfeito para qualquer tipo de uso.',
+    photo:
+      'https://images.kabum.com.br/produtos/fotos/sync_mirakl/418439/Monitor-HQ-24HQ-LED-24-LED-Widescreen-2ms-75hz-Full-HD-HDMI-VESA-Ajuste-De-Inclina-o_1673893091_gg.jpg',
+    price: '710.00',
+    createdAt: '2023-01-23T18:17:04.771Z',
+    updatedAt: '2023-01-23T18:17:04.771Z'
+  },
+  {
     id: 10,
     name: 'Tablet Lenovo Tab P11 Plus',
     brand: 'Lenovo',
