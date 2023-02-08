@@ -23,7 +23,7 @@ export const productApi = createApi({
   }),
   endpoints: builder => ({
     getAllProducts: builder.query<IGetAllProductsRes, void>({
-      query: () => `products?page=1&rows=10`
+      query: () => `products?page=1&rows=12`
     })
   })
 })
