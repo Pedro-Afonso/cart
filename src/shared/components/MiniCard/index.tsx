@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FC } from 'react'
 
 import { removeProduct } from '@/slices/cartSlice'
-import { QuantityControl } from '@/components'
+import { CounterControl } from '@/components'
 import { useAppDispatch } from '@/hooks'
 import { formatPrice } from '@/utils'
 import { IProduct } from '@/services'
@@ -51,7 +51,7 @@ export const MiniCard: FC<IMiniCardProps> = ({ product, quantity }) => {
         </ImageContainer>
         <Text>{name}</Text>
         <QuantityWrapper>
-          <QuantityControl product={product} quantity={quantity} />
+          <CounterControl product={product} quantity={quantity} />
         </QuantityWrapper>
         <Price data-testid="price-id">
           {formatPrice(Number(price) * quantity)}

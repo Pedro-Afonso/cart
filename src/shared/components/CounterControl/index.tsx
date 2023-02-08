@@ -3,17 +3,14 @@ import { FC } from 'react'
 import { addProduct, subProduct } from '@/slices/cartSlice'
 import { useAppDispatch } from '@/hooks'
 import { IProduct } from '@/services'
-import { Button, Container, Quantity } from './styles'
+import { Button, Container, CounterDisplay } from './styles'
 
-interface IQuantityControlProps {
+interface ICounterProps {
   product: IProduct
   quantity: number
 }
 
-export const QuantityControl: FC<IQuantityControlProps> = ({
-  product,
-  quantity
-}) => {
+export const CounterControl: FC<ICounterProps> = ({ product, quantity }) => {
   const dispatch = useAppDispatch()
 
   const isSubButtonDisabled = quantity <= 1
@@ -33,7 +30,7 @@ export const QuantityControl: FC<IQuantityControlProps> = ({
       <Button onClick={handleSubProduct} disabled={isSubButtonDisabled}>
         -
       </Button>
-      <Quantity data-testid="quantity-id">{quantity}</Quantity>
+      <CounterDisplay data-testid="quantity-id">{quantity}</CounterDisplay>
       <Button onClick={handleAddProduct}>+</Button>
     </Container>
   )

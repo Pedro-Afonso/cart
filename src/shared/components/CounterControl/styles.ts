@@ -13,7 +13,7 @@ export const Container = styled.div`
   }
 `
 
-export const Quantity = styled.span`
+export const CounterDisplay = styled.span`
   flex: 1;
   font-size: 0.8rem;
   line-height: 2rem;

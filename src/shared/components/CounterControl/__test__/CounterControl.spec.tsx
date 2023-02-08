@@ -3,15 +3,15 @@ import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from '@/providers'
 import { data } from '@/mocks'
 
-import { QuantityControl } from '..'
+import { CounterControl } from '..'
 
-describe('QuantityControl', () => {
+describe('CounterControl', () => {
   const product = data.products[0]
   const quantity = 2
 
   it('should show the quantity of the product', async () => {
     renderWithProviders(
-      <QuantityControl quantity={quantity} product={product} />
+      <CounterControl quantity={quantity} product={product} />
     )
 
     const quantityIndicator = screen.getByTestId('quantity-id')
@@ -21,7 +21,7 @@ describe('QuantityControl', () => {
 
   it('should increase the quantity of products', async () => {
     const { store } = renderWithProviders(
-      <QuantityControl quantity={quantity} product={product} />,
+      <CounterControl quantity={quantity} product={product} />,
       {
         preloadedState: {
           cart: { items: [{ product, quantity }] }
@@ -39,7 +39,7 @@ describe('QuantityControl', () => {
 
   it('should decrease the quantity of products', async () => {
     const { store } = renderWithProviders(
-      <QuantityControl quantity={quantity} product={product} />,
+      <CounterControl quantity={quantity} product={product} />,
       {
         preloadedState: {
           cart: { items: [{ product, quantity }] }
@@ -57,7 +57,7 @@ describe('QuantityControl', () => {
 
   it('should not decrease the quantity of products', async () => {
     const { store } = renderWithProviders(
-      <QuantityControl quantity={1} product={product} />,
+      <CounterControl quantity={1} product={product} />,
       {
         preloadedState: {
           cart: { items: [{ product, quantity: 1 }] }
@@ -74,7 +74,7 @@ describe('QuantityControl', () => {
   })
 
   it('should have a disabled button', async () => {
-    renderWithProviders(<QuantityControl quantity={1} product={product} />)
+    renderWithProviders(<CounterControl quantity={1} product={product} />)
     const button = screen.getByRole('button', { name: /-/i })
 
     expect(button).toBeDisabled()
