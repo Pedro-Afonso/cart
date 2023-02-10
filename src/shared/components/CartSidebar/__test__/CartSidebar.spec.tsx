@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 
 import { renderWithProviders } from '@/providers'
 import { data } from '@/mocks'
@@ -68,5 +68,22 @@ describe('CartSidebar', () => {
     const button = screen.getByRole('button', { name: /Finalizar Compra/i })
 
     expect(button).toBeInTheDocument()
+  })
+
+  it("should close 'CartSidebar' component", () => {
+    const { store } = renderWithProviders(<CartSidebar />, {
+      preloadedState: {
+        sidebar: { isSidebarOpen: true }
+      }
+    })
+
+    const button = screen.getByLabelText('close')
+    const sidebarComponent = screen.getByTestId('sidebar-id')
+
+    fireEvent.click(button)
+
+    const sidebar = store.getState().sidebar
+    expect(sidebar.isSidebarOpen).toBe(false)
+    expect(sidebarComponent).not.toBeInTheDocument()
   })
 })
