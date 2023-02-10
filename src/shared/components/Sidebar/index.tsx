@@ -7,7 +7,7 @@ import { EPortalLocation, Portal } from '@/components'
 import { CloseButton, Container, Header, Title } from './styles'
 
 interface ISidebarProps {
-  isOpen: boolean
+  isOpen?: boolean
   onClose: () => void
   title: ReactNode | string
   children: ReactNode
@@ -25,10 +25,10 @@ export const Sidebar: FC<ISidebarProps> = ({
 
   const sidebarWrapper = isOpen ? (
     <>
-      <Container>
+      <Container data-testid="sidebar-id">
         <Header>
           <Title>{title}</Title>
-          <CloseButton onClick={onClose}>
+          <CloseButton aria-label="close" onClick={onClose}>
             <AiFillCloseCircle size="3.8rem" />
           </CloseButton>
         </Header>
