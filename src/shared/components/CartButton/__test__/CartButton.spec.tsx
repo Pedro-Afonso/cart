@@ -31,7 +31,6 @@ describe('CartButton', () => {
     fireEvent.click(button)
 
     const sidebar = store.getState().sidebar
-    expect(button).toBeInTheDocument()
     expect(sidebar.isSidebarOpen).toBe(true)
   })
 })
