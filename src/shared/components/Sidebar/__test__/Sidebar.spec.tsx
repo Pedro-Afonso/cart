@@ -1,9 +1,9 @@
+import { cleanup, screen } from '@testing-library/react'
 import mockRouter from 'next-router-mock'
 
 import { renderWithProviders } from '@/providers'
 
 import { Sidebar } from '..'
-import { cleanup, screen } from '@testing-library/react'
 
 jest.mock('next/router', () => require('next-router-mock'))
 
