@@ -22,6 +22,7 @@ const customJestConfig = {
     '!src/shared/assets/**',
     //  '!src/shared/pages/**',
     '!src/shared/themes/**',
+    '!src/shared/config/productData.ts',
     //  '!src/shared/**/types/**',
     '!src/shared/**/styles.ts'
   ],
