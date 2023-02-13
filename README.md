@@ -36,8 +36,7 @@
  ---
 
 
-<img src='https://user-images.githubusercontent.com/50973575/217566730-afe7f83f-5ea3-4013-a80c-c8fc0a7ae958.png' height='auto' width='60.2%' />
-<img src='https://user-images.githubusercontent.com/50973575/217566737-159505bd-0d00-4ba4-bd43-364704a8bfa4.png' height='auto' width='35%' /> 
+<img src='https://user-images.githubusercontent.com/50973575/217566730-afe7f83f-5ea3-4013-a80c-c8fc0a7ae958.png' height='auto' width='60.2%' /><img src='https://user-images.githubusercontent.com/50973575/217566737-159505bd-0d00-4ba4-bd43-364704a8bfa4.png' height='auto' width='35%' /> 
 
 
 
@@ -45,7 +44,7 @@
 
 # :monocle_face: Sobre o Projeto
 
-Este projeto tem o objetivo de listar os produtos da API, para que o usuário possa colocar os produtos no carrinho.
+Este projeto tem o objetivo de listar os produtos da API, para que o usuário possa adicionar, incrementar ou retirar os produtos no carrinho.
 
 <br />
 
