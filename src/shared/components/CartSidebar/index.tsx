@@ -16,6 +16,13 @@ export const CartSidebar = () => {
 
   const { totalPrice } = useCartValues()
 
+  const onCheckout = () => {
+    alert(
+      'Parabéns! Você adquiriu:\n\n' +
+        items.map(item => item.quantity + ' x ' + item.product.name).join('\n')
+    )
+  }
+
   const onClose = () => {
     dispatch(toggleSidebar())
   }
@@ -43,7 +50,7 @@ export const CartSidebar = () => {
         <span>Total:</span>
         <span>{formatPrice(totalPrice)}</span>
       </Total>
-      <CheckoutButton>Finalizar Compra</CheckoutButton>
+      <CheckoutButton onClick={onCheckout}>Finalizar Compra</CheckoutButton>
     </Sidebar>
   )
 }
