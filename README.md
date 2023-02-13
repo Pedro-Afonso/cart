@@ -46,6 +46,14 @@
 
 Este projeto tem o objetivo de listar os produtos da API, para que o usuário possa adicionar, incrementar ou retirar os produtos no carrinho.
 
+Motivação: Aplicar testes de integração usando o jest/testing library em uma aplicação que envolva a lógica do redux-toolkit e Nextjs (sem SSR) 
+
+Descrição:  O site lista os produtos da api criada no Nextjs, o usuário pode adicionar os produtos em um carrinho, alterar a quantidade ou remover do carrinho. O RTK (redux toolkit) foi usado para gerenciar o estado do carrinho, e o estado do menu lateral que foi criado com o React.createPortal. O RTK Query foi usado para controlar o cache da requisição. 
+
+Foi realizados testes de integração (sem “mockar” a lógica do redux) usando o jest/testing library e o Mock Server Working (msw) para interceptar as requisições, como recomenda a documentação do redux.
+
+O desing foi retirado do processo de seleção da MKS system
+
 <br />
 
 ---
