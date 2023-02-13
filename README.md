@@ -102,7 +102,7 @@ O desing foi retirado do processo de seleção da MKS system
 1. Abra o terminal na pasta desejada para clonar o repositório e execute o comando:
 
 ```bash
-git clone https://github.com/pedro-afonso/random-user.git
+git clone https://github.com/pedro-afonso/cart.git
 ```
 
 2. Depois de concluído, execute os seguintes comandos para iniciar:
